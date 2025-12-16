@@ -35,6 +35,10 @@ Route::middleware(['auth'])->group(function () {
     return view('dd.d1');
     });
 
+    Route::get('/dd/d2', function () {
+    return view('dd.d2');
+    });
+
     Volt::route('settings/profile', 'settings.profile')->name('profile.edit');
     Volt::route('settings/password', 'settings.password')->name('user-password.edit');
     Volt::route('settings/appearance', 'settings.appearance')->name('appearance.edit');
