@@ -31,6 +31,10 @@ Route::middleware(['auth'])->group(function () {
     return view('bb.b2');
     });
 
+    Route::get('/cc/c1', function () {
+    return view('cc.c1');
+    });
+
     Volt::route('settings/profile', 'settings.profile')->name('profile.edit');
     Volt::route('settings/password', 'settings.password')->name('user-password.edit');
     Volt::route('settings/appearance', 'settings.appearance')->name('appearance.edit');
