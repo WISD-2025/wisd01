@@ -14,9 +14,13 @@ Route::view('dashboard', 'dashboard')
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
-    
+
     Route::get('/bb/b1', function () {
     return view('bb.b1');
+    });
+
+    Route::get('/bb/b2', function () {
+    return view('bb.b2');
     });
 
     Volt::route('settings/profile', 'settings.profile')->name('profile.edit');
